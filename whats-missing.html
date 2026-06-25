@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who's showing up when Parma searches for pizza?</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; padding: 32px 16px; color: #1a1a1a; }
+  .card { background: white; max-width: 640px; margin: 0 auto; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.10); }
+  .header { background: #C0392B; padding: 28px 32px; }
+  .header h1 { color: white; font-size: 20px; font-weight: 700; line-height: 1.3; }
+  .header p { color: rgba(255,255,255,0.85); font-size: 13px; margin-top: 6px; }
+  .body { padding: 28px 32px; }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-bottom: 12px; }
+  .search-bar { background: #f8f8f8; border: 1.5px solid #e0e0e0; border-radius: 24px; padding: 10px 18px; font-size: 14px; color: #1a1a1a; display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .search-bar svg { flex-shrink: 0; }
+  .results-label { font-size: 12px; color: #70757a; margin-bottom: 14px; }
+  .result { padding: 14px 0; border-bottom: 1px solid #f0f0f0; }
+  .result:last-child { border-bottom: none; }
+  .result-num { display: inline-block; width: 22px; font-size: 12px; color: #aaa; font-weight: 600; vertical-align: middle; }
+  .result-name { font-size: 15px; font-weight: 600; color: #1a0dab; }
+  .result-url { font-size: 12px; color: #202124; opacity: 0.6; margin: 2px 0 2px 22px; }
+  .result-desc { font-size: 13px; color: #4d5156; margin-left: 22px; line-height: 1.5; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 8px; vertical-align: middle; }
+  .badge-competitor { background: #fdecea; color: #C0392B; }
+  .badge-chain { background: #fff3e0; color: #e65100; }
+  .divider { height: 1px; background: #f0f0f0; margin: 20px 0; }
+  .missing { background: #fdecea; border: 1.5px dashed #C0392B; border-radius: 8px; padding: 16px 20px; margin-top: 20px; }
+  .missing-title { font-size: 14px; font-weight: 700; color: #C0392B; margin-bottom: 4px; }
+  .missing-text { font-size: 13px; color: #555; line-height: 1.5; }
+  .footer { background: #1a1a1a; padding: 20px 32px; }
+  .footer p { color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.6; }
+  .footer strong { color: white; }
+  .cta { display: block; background: #C0392B; color: white; text-align: center; padding: 14px; font-size: 14px; font-weight: 700; text-decoration: none; margin: 20px 32px 28px; border-radius: 4px; letter-spacing: 0.03em; }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="header">
+    <h1>Someone in Parma just searched "pizza near me" on Google.</h1>
+    <p>Here's exactly what they saw — checked today, June 16 2026.</p>
+  </div>
+
+  <div class="body">
+    <p class="label">Google Search — "pizza in Parma Ohio"</p>
+
+    <div class="search-bar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#70757a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      pizza in Parma Ohio
+    </div>
+
+    <p class="results-label">Top results right now:</p>
+
+    <div class="result">
+      <span class="result-num">1</span>
+      <span class="result-name">Romeo's Pizza <span class="badge badge-competitor">Competitor</span></span>
+      <div class="result-url">romeospizza.com/parma</div>
+      <div class="result-desc">Handcrafted pizza, online ordering, showing up for every pizza search in Parma.</div>
+    </div>
+
+    <div class="result">
+      <span class="result-num">2</span>
+      <span class="result-name">Casamel's Pizza <span class="badge badge-competitor">Competitor</span></span>
+      <div class="result-url">casamelspizza.com</div>
+      <div class="result-desc">Family-owned, 30 years in Parma — and ranking above Napoleon's on Google.</div>
+    </div>
+
+    <div class="result">
+      <span class="result-num">3</span>
+      <span class="result-name">Papa John's <span class="badge badge-chain">Chain</span></span>
+      <div class="result-url">papajohns.com/parma</div>
+      <div class="result-desc">A national chain with zero local roots — ranking ahead of Napoleon's.</div>
+    </div>
+
+    <div class="result">
+      <span class="result-num">4</span>
+      <span class="result-name">P.Jay's Pizza <span class="badge badge-competitor">Competitor</span></span>
+      <div class="result-url">pjayspizza.com</div>
+      <div class="result-desc">Another local Parma pizza place — visible on Google, Napoleon's is not.</div>
+    </div>
+
+    <div class="result">
+      <span class="result-num">5</span>
+      <span class="result-name">Guy's Pizza <span class="badge badge-competitor">Competitor</span></span>
+      <div class="result-url">guyspizzaco.com</div>
+      <div class="result-desc">Ranking on page 1. Napoleon's is not.</div>
+    </div>
+
+    <div class="result">
+      <span class="result-num">6</span>
+      <span class="result-name">Pizza Hut <span class="badge badge-chain">Chain</span></span>
+      <div class="result-url">pizzahut.com/parma</div>
+      <div class="result-desc">A national chain with no local story — still beating Napoleon's on Google.</div>
+    </div>
+
+    <div class="missing">
+      <div class="missing-title">❌ Napoleon's Pizza — not on page 1</div>
+      <div class="missing-text">Napoleon's has been in Parma since 1983. 906 Google reviews. Award-winning deep dish. And yet — anyone searching for pizza in Parma right now has no way of finding you unless they already know your name.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="body" style="padding-top: 0;">
+    <p style="font-size: 14px; color: #333; line-height: 1.7;">
+      I built a new site for Napoleon's specifically to fix this. Every order button connects to your HungerRush — nothing changes on your end. Getting it live takes less than an hour.<br><br>
+      <strong>Take a look:</strong> <a href="https://napoleans-pizza.vercel.app/" style="color: #C0392B;">napoleans-pizza.vercel.app</a>
+    </p>
+  </div>
+
+  <a href="https://calendly.com/raghavneon/15-min-meeting" class="cta">Book a 10-Minute Call →</a>
+
+  <div class="footer">
+    <p><strong>Raghav Gopalakrishnan</strong><br>
+    raghavneon@gmail.com · 416-648-7862<br>
+    linkedin.com/in/raghavneon · neonailabs.com</p>
+  </div>
+
+</div>
+</body>
+</html>
